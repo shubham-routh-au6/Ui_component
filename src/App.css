@@ -1,38 +1,441 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;500&display=swap");
+
+* {
+  font-family: "Inter", sans-serif !important;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.carousel {
+  overflow: hidden;
+  margin-top: 2rem;
+  padding: 0 !important;
+  background-color: #ebedf6;
+  border-radius: 0.8rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.carouselItem {
+  display: inline-flex;
+  justify-content: center;
+  height: 600px;
+  color: black;
+}
+
+.indicators {
   display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.indicators > button {
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  padding: 0 !important;
+}
+
+.indicators > button:hover {
+  border: 3px solid rgb(212, 208, 208);
+}
+
+.indicators > button.active {
+  border: 3px solid tomato;
+}
+
+.indicators > button.active:hover {
+  box-shadow: 0 0 0 3px rgb(212, 208, 208);
+}
+
+.indicatorImage {
+  height: 3rem;
+  width: 4rem;
+}
+
+/*  First Page */
+.pageContainer {
+  margin-top: 3rem;
+  width: 80%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.pageTextCon {
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.logoContainer {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.8rem;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  height: 2.5rem;
+  width: 2.8rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.logoName {
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+
+.fstPageCount {
+  width: 22rem;
+}
+
+.fstPageHeading {
+  margin-top: 1.3rem !important;
+  font-size: 2rem !important;
+}
+
+.fstPageSubHeading {
+  color: gray;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.inputField {
+  padding-left: 1rem;
+  height: 2rem;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+.fstPageButton {
+  background-color: #664ee5 !important;
+  color: #fff !important;
+  width: 100% !important;
+  margin-top: 1.6rem !important;
+  text-transform: none !important;
+}
+
+/* Second Page  */
+.urlLabel {
+  font-size: 0.8rem;
+  margin-bottom: 0 !important;
+}
+
+.input-group-text {
+  color: grey;
+}
+
+.secondPgeInputContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 80%;
+  margin-top: 1rem;
+}
+
+.scndPageButton {
+  background-color: #664ee5 !important;
+  color: #fff !important;
+  width: 80% !important;
+  margin-top: 0.8rem !important;
+  text-transform: none !important;
+}
+
+.scndPageHeading {
+  margin-top: 1.3rem !important;
+  font-size: 2rem !important;
+}
+
+/* Third Page  */
+.thirdPgeInputContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  text-align: left;
+  width: 80%;
+  margin-top: 0.6rem;
+}
+
+.thrdPageCard {
+  cursor: pointer;
+  border: 2px solid lightgray;
+  border-radius: 0.5rem;
+  padding: 0.7rem;
+}
+
+.caption {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: gray;
+  margin-bottom: 0;
+}
+
+.title {
+  font-size: 0.9rem !important;
+}
+
+.thrdPageButton {
+  background-color: #664ee5 !important;
+  color: #fff !important;
+  width: 68% !important;
+  margin-top: 1.4rem !important;
+  text-transform: none !important;
+}
+
+#firstCard {
+  border: 2px solid #664ee5;
+}
+
+/* Fourth Page */
+.checkIconCon {
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+  background-color: #664ee5;
+  padding: 1.1rem;
+  border-radius: 50%;
+}
+
+.checkIcon {
+  color: #fff;
+}
+
+.frthPageSubHeading {
+  color: gray;
+  margin-top: 0.8rem !important;
+  margin-bottom: 0.8rem !important;
+}
+
+.frthPageButton {
+  background-color: #664ee5 !important;
+  color: #fff !important;
+  width: 80% !important;
+  margin-top: 1.6rem !important;
+  text-transform: none !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .carouselItem {
+    height: 500px;
   }
-  to {
-    transform: rotate(360deg);
+  .pageContainer {
+    width: 70%;
+  }
+  .secondPgeInputContainer {
+    width: 60%;
+  }
+  .fstPageCount {
+    width: 8rem;
+  }
+  .fstPageHeading {
+    margin-top: 1rem !important;
+    font-size: 0.9rem !important;
+  }
+  .scndPageHeading {
+    margin-top: 1rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .fstPageSubHeading {
+    font-size: 0.6rem !important;
+    margin-top: 0.6rem !important;
+    margin-bottom: 0.2rem !important;
+  }
+
+  .logo {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  .logoName {
+    font-weight: 900;
+    font-size: 1rem;
+  }
+
+  .inputField {
+    height: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .fstPageButton {
+    font-size: 0.7rem !important;
+  }
+  .scndPageButton {
+    font-size: 0.7rem !important;
+    width: 60% !important;
+    margin-top: 0.6rem !important;
+  }
+  .input-group-text {
+    font-size: 0.6rem;
+  }
+
+  .thrdPageCard {
+    padding: 0.3rem;
+  }
+  .caption {
+    margin-top: 0.3rem;
+    font-size: 0.5rem;
+  }
+  .title {
+    font-size: 0.8rem !important;
+  }
+
+  .thrdPageButton {
+    font-size: 0.7rem !important;
+    width: 75% !important;
+    margin-top: 1rem !important;
+  }
+  .checkIconCon {
+    margin-top: 2rem;
+    margin-bottom: .8rem;
+    background-color: #664ee5;
+    padding: .9rem;
+    border-radius: 50%;
+  }
+  .frthPageSubHeading {
+    font-size: 0.6rem !important;
+    margin-top: 0.6rem !important;
+    margin-bottom: 0.2rem !important;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .pageContainer {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 680px) and (min-width: 601px) {
+  .scndPageHeading {
+    margin-top: 1.3rem !important;
+    font-size: 1.8rem !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .indicators > button {
+    margin-top: 1.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .indicatorImage {
+    height: 2rem;
+    width: 3rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .carouselItem {
+    height: 400px;
+  }
+  .indicators > button {
+    margin-top: 1rem;
+    margin-right: 0.01rem;
+  }
+
+  .indicatorImage {
+    height: 1.8rem;
+    width: 2.5rem;
+  }
+
+  .inputContainer {
+    width: 70%;
+    margin-top: 0.9rem;
+  }
+
+  .inputField {
+    padding-left: 0.7rem;
+    height: 1.4rem;
+    font-size: 0.6rem;
+  }
+
+  .inputFieldName {
+    font-size: 0.6rem !important;
+  }
+
+  .fstPageHeading {
+    margin-top: 1.3rem !important;
+    font-size: 0.7rem !important;
+  }
+
+  .fstPageSubHeading {
+    font-size: 0.5rem !important;
+  }
+
+  .fstPageButton {
+    width: 70% !important;
+    height: 1.5rem !important;
+    font-size: 0.6rem !important;
+  }
+
+  .scndPageHeading {
+    margin-top: 1.3rem !important;
+    font-size: 0.7rem !important;
+  }
+  .secondPgeInputContainer {
+    width: 70%;
+  }
+  .scndPageButton {
+    width: 70% !important;
+    margin-top: 0.5rem !important;
+    height: 1.5rem !important;
+    font-size: 0.6rem !important;
+  }
+  .urlLabel {
+    font-size: 0.6rem;
+  }
+  .thirdPgeInputContainer {
+    margin-top: 0.2rem;
+  }
+  .thrdPageCard {
+    padding: 0.1rem;
+  }
+  .title {
+    font-size: 0.6rem !important;
+  }
+  .caption {
+    margin-top: 0.2rem;
+    font-size: 0.4rem;
+  }
+
+  .thrdPageButton {
+    width: 70% !important;
+    margin-top: 1rem !important;
+    height: 1.5rem !important;
+    font-size: 0.6rem !important;
+  }
+  .frthPageButton {
+    width: 70% !important;
+    margin-top: 1rem !important;
+    height: 1.5rem !important;
+    font-size: 0.6rem !important;
+  }
+  .frthPageSubHeading {
+    font-size: 0.4rem !important;
+    margin-top: 0.6rem !important;
+    margin-bottom: 0 !important;
+  }
+  .checkIconCon {
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+    background-color: #664ee5;
+    padding: 0.7rem;
+    border-radius: 50%;
   }
 }

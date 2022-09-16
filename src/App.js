@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Carousel, { CarouselItem } from "./Component/Carousel/index";
+import FirstPage from "./Component/FirstPage";
+import SecondPage from "./Component/SecondPage";
+import ThirdPage from "./Component/ThirdPage";
+import FourthPage from "./Component/FourthPage";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <Carousel>
+        <CarouselItem
+          img={
+            "https://geographical.co.uk/wp-content/uploads/somalaya-mountain-range-title.jpg"
+          }
         >
-          Learn React
-        </a>
-      </header>
+          <FirstPage />
+        </CarouselItem>
+        <CarouselItem
+          img={"https://cdn.mos.cms.futurecdn.net/ntFmJUZ8tw3ULD3tkBaAtf.jpg"}
+        >
+          <SecondPage />
+        </CarouselItem>
+        <CarouselItem
+          img={"https://cdn.mos.cms.futurecdn.net/ntFmJUZ8tw3ULD3tkBaAtf.jpg"}
+        >
+          <ThirdPage />
+        </CarouselItem>
+        <CarouselItem
+          img={"https://cdn.mos.cms.futurecdn.net/ntFmJUZ8tw3ULD3tkBaAtf.jpg"}
+        >
+          <FourthPage />
+        </CarouselItem>
+      </Carousel>
     </div>
   );
-}
+};
 
 export default App;
