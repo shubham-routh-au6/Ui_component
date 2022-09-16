@@ -5,31 +5,25 @@ import FirstPage from "./Component/FirstPage";
 import SecondPage from "./Component/SecondPage";
 import ThirdPage from "./Component/ThirdPage";
 import FourthPage from "./Component/FourthPage";
+import FirstIndicator from "./Image/firstIndicator.png";
+import SecondIndicator from "./Image/secondIndicator.png";
+import ThirdIndicator from "./Image/thirdIndicator.png";
+import FourthIndicator from "./Image/fourthIndicator.png";
 
 const App = () => {
   return (
     <div className="App">
       <Carousel>
-        <CarouselItem
-          img={
-            "https://geographical.co.uk/wp-content/uploads/somalaya-mountain-range-title.jpg"
-          }
-        >
+        <CarouselItem img={FirstIndicator}>
           <FirstPage />
         </CarouselItem>
-        <CarouselItem
-          img={"https://cdn.mos.cms.futurecdn.net/ntFmJUZ8tw3ULD3tkBaAtf.jpg"}
-        >
+        <CarouselItem img={SecondIndicator}>
           <SecondPage />
         </CarouselItem>
-        <CarouselItem
-          img={"https://cdn.mos.cms.futurecdn.net/ntFmJUZ8tw3ULD3tkBaAtf.jpg"}
-        >
+        <CarouselItem img={ThirdIndicator}>
           <ThirdPage />
         </CarouselItem>
-        <CarouselItem
-          img={"https://cdn.mos.cms.futurecdn.net/ntFmJUZ8tw3ULD3tkBaAtf.jpg"}
-        >
+        <CarouselItem img={FourthIndicator}>
           <FourthPage />
         </CarouselItem>
       </Carousel>
